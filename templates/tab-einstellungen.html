@@ -1,0 +1,46 @@
+<ion-view view-title="Einstellungen">
+  <ion-content>
+
+    <br>
+    <div style="text-align:center;font-size:1.5em"><p> System </p></div>
+     
+    <?php
+         //Pin als Ausgang definieren
+         //$val = trim(@shell_exec("/usr/local/bin/gpio -g mode 17 out"));
+        
+         if(isset($_GET['led'])) {
+           
+           //LED ein
+           if($_GET['reboot'] == '1') {
+              $val = trim(@shell_exec("reboot));
+              //$val = trim(@shell_exec("/usr/local/bin/gpio -g write 17 1"));
+           }
+           
+           //LED aus
+           elseif($_GET['shutdown'] == '1') {
+              $val = trim(@shell_exec("shutdown -h 0"));
+              //$val = trim(@shell_exec("/usr/local/bin/gpio -g write 17 0"));
+           }
+         }
+    ?>
+    
+    <br>
+    <div style="text-align:center;">
+      <button class="button button-outline button-dark" href="<?php print($_SERVER['PHP_SELF']); ?>?systemtest=1" style="font-size:14px">
+        Systemtest
+      </button>
+      <br><br>     
+      <button class="button button-outline button-dark" href="<?php print($_SERVER['PHP_SELF']); ?>?reboot=1" style="font-size:14px">
+        Neustarten
+      </button>
+      <br><br> 
+      <button class="button button-outline button-dark" href="<?php print($_SERVER['PHP_SELF']); ?>?shutdown=1" style="font-size:13px">
+        Herunterfahren
+      </button>
+    </div>     
+    
+    
+  </ion-content>
+
+
+</ion-view>

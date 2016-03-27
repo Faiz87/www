@@ -1,0 +1,25 @@
+<ion-view view-title="BB Feeder">
+  <ion-content class="padding">
+    <br>
+    <div style="text-align:center;">
+       <a><img src="img/logo.png" width="170" height="110" alt="BB Equipment" /></a>
+    </div>
+    <br>
+    <div style="text-align:center;font-size:1.5em; color:dark-grey"><p>Fütterung</p></div>
+    <br>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <div class="row text-center">
+       <div class="col">
+          <button class="button button-outline button-dark" ng-click="php('befehl=Relay1 on')">
+          Einschalten
+          </button>
+       </div>
+       <div class="col">
+          <button class="button button-outline button-dark" ng-click="php('befehl=Relay1 off')">
+          Auschalten
+          </button>
+       </div>
+    </div>
+
+  </ion-content>
+</ion-view>
