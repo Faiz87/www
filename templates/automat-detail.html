@@ -1,0 +1,37 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Automat {{automat.id}}">
+  <ion-content class="padding">
+    
+    <img ng-src="{{automat.face}}" style="width: 64px; height: 64px">
+    <p>{{automat.name}}</p>
+    <p>Gerätestatus: {{automat.status}}</p>
+    <p>Futter: {{automat.futterart}}</p>
+    <p>Futtermenge: {{automat.futtermenge}}</p>
+    <p>Letzte Fütterung: {{automat.lastFeed}}</p>
+    <div style="text-align:right;">
+      <ion-toggle ng-click="sendStatus()" ng-model="new_stat_num">
+      Ein-/Ausschalten
+      </ion-toggle>
+    </div>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/automaten/{{automat.id}}/info">
+      <img ng-src="img/info.png">
+      <h2>Informationen</h2>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-item>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/automaten/{{automat.id}}/manuell">
+      <img ng-src="img/manuell.png">
+      <h2>Manuelle Steuerung</h2>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-item>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/automaten/{{automat.id}}/zeit">
+      <img ng-src="img/zeit.png">
+      <h2>Zeitgesteuert</h2>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-item>
+  </ion-content>
+</ion-view>

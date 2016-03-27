@@ -1,0 +1,56 @@
+
+    
+    
+    
+<ion-view title="Automat Hinzufügen" id="AddAutomatPage">
+     
+        <ion-nav-buttons ui-sref="tab.automaten" side="left" ng-show="false" >
+            <button ui-sref="tab.automaten" class="button button-icon button-clear ion-ios-arrow-left" >
+                Back
+            </button>
+        </ion-nav-buttons>
+    
+    <ion-content overflow-scroll="true" padding="true"  class="has-header"  > 
+        
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Tier
+                </div>
+                <select>
+                    <option selected>-</option>
+                    <option>Pferd</option>
+                    <option>Hund</option>
+                    <option>Ziege</option>
+                </select>
+            </label>
+        </div>
+        
+        <div class="list">
+          <label class="item item-input item-floating-label">
+                <span class="input-label">Gerätname</span>
+                <input type="text" placeholder="Gerätname">
+          </label>
+
+          <label class="item item-input item-floating-label">
+                <span class="input-label">Futterart</span>
+                <input type="text" placeholder="Futterart">
+          </label>
+
+          <label class="item item-input item-floating-label">
+                <span class="input-label">Futtermenge</span>
+                <input type="text" placeholder="Futtermenge">
+          </label>
+        </div>
+        
+
+            <button class="button button-block button-dark">
+             Hinzufügen
+            </button>
+  
+        
+
+        
+
+     </ion-content>
+</ion-view
